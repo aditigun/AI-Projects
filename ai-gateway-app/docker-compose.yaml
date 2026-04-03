@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: ankane/pgvector
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
